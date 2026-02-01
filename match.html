@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Your match — Brand Marketplace</title>
+    <meta
+      name="description"
+      content="Categorizing your website and matching you to a creator from your database."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">BM</div>
+          <div class="brand-text">
+            <div class="brand-name">Brand Marketplace</div>
+            <div class="brand-tagline">Creators × Brands</div>
+          </div>
+        </div>
+
+        <div class="match-nav">
+          <a class="nav-link" href="./index.html">Start over</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="match-page">
+      <section class="match-shell">
+        <div class="container">
+          <div class="match-panel" aria-label="Matching progress">
+            <div class="panel-header">
+              <div class="panel-title">Finding your match</div>
+              <div class="panel-subtitle">
+                Website: <span id="websiteLabel" class="mono">—</span>
+              </div>
+            </div>
+
+            <div class="results">
+              <div id="loader" class="loader" aria-live="polite">
+                <div class="loader-top">
+                  <div class="loader-title" id="loaderTitle">Categorizing your website…</div>
+                  <div class="loader-subtitle" id="loaderSubtitle">
+                    This takes about 4 seconds.
+                  </div>
+                </div>
+
+                <div class="progress" aria-hidden="true">
+                  <div class="progress-bar"></div>
+                </div>
+
+                <ol class="steps-mini" aria-label="Progress steps">
+                  <li id="step1" class="step-mini active">Categorizing your website</li>
+                  <li id="step2" class="step-mini">Finding the right creators</li>
+                  <li id="step3" class="step-mini">Finalizing your match</li>
+                </ol>
+              </div>
+
+              <div id="results" aria-live="polite"></div>
+
+              <div id="categoryFallback" class="fallback" hidden>
+                <div class="fallback-title">Pick a category to refine the match</div>
+                <div class="fallback-subtitle">We’ll select a creator from that category.</div>
+                <div class="fallback-row">
+                  <label class="sr-only" for="categorySelect">Category</label>
+                  <select id="categorySelect" class="select"></select>
+                  <button id="refineBtn" class="button button-secondary" type="button">
+                    Show best match
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+

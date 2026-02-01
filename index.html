@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Brand Marketplace — match with creators</title>
+    <meta
+      name="description"
+      content="Connect brands with creators who fit your category. Paste your website and get a match in seconds."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">BM</div>
+          <div class="brand-text">
+            <div class="brand-name">Brand Marketplace</div>
+            <div class="brand-tagline">Creators × Brands</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="home">
+        <div class="container home-inner">
+          <form id="homeForm" class="match-form" novalidate>
+            <label class="field-label" for="website">
+              Your website
+              <span class="field-hint">(e.g. <span class="mono">https://yourbrand.com</span>)</span>
+            </label>
+            <div class="field-row">
+              <input
+                id="website"
+                name="website"
+                class="input"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                placeholder="https://"
+                aria-describedby="websiteHelp websiteError"
+                required
+              />
+              <button id="cta" class="button" type="submit">Get a creator match</button>
+            </div>
+
+            <div id="websiteHelp" class="help">
+              We’ll analyze your website with AI to classify it and match a creator from your database.
+            </div>
+            <div id="websiteError" class="error" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./home.js" defer></script>
+  </body>
+</html>

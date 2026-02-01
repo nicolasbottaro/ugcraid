@@ -1,0 +1,10 @@
+{
+  "name": "brand-marketplace",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Marketplace homepage: Google Sheets creators + AI site classification",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
+
